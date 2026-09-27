@@ -1,0 +1,10 @@
+# Commit messages and local notes
+tmp/
+
+# KiCad backups, lock files and caches
+*.bak
+*-bak
+*-backups/
+~*
+*.lck
+fp-info-cache
