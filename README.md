@@ -44,3 +44,4 @@ Every part, where it came from and when it was checked against its datasheet.
 
 | Part | Symbol | Footprint | 3D model | Source | Datasheet checked | Used in |
 | --- | --- | --- | --- | --- | --- | --- |
+| solar_cooker_logo | | ✓ | | Unknown | n/a, a logo | ds3231, bme680, max31865, microsd |
