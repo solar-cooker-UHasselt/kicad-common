@@ -45,3 +45,4 @@ Every part, where it came from and when it was checked against its datasheet.
 | Part | Symbol | Footprint | 3D model | Source | Datasheet checked | Used in |
 | --- | --- | --- | --- | --- | --- | --- |
 | solar_cooker_logo | | ✓ | | Unknown | n/a, a logo | ds3231, bme680, max31865, microsd |
+| MIC5225-3.3YM5 | ✓ | | | [Microchip datasheet DS20006683](https://ww1.microchip.com/downloads/aemDocuments/documents/APID/ProductDocuments/DataSheets/MIC5225-Ultra-Low-Quiescent-Current-150mA-MicroCap-Low-Dropout-Regulator-DS20006683.pdf) | 2026-09-27 | max31865 |
