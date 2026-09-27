@@ -47,3 +47,4 @@ Every part, where it came from and when it was checked against its datasheet.
 | solar_cooker_logo | | ✓ | | Unknown | n/a, a logo | ds3231, bme680, max31865, microsd |
 | MIC5225-3.3YM5 | ✓ | | | [Microchip datasheet DS20006683](https://ww1.microchip.com/downloads/aemDocuments/documents/APID/ProductDocuments/DataSheets/MIC5225-Ultra-Low-Quiescent-Current-150mA-MicroCap-Low-Dropout-Regulator-DS20006683.pdf) | 2026-09-27 | max31865 |
 | MEM2061-01-188-00-A | | ✓ | ✓ | SnapEDA (GCT's CAD partner), checked against [GCT drawing MEM2061](https://gct.co/connector/mem2061) of 2015-06-15 | 2026-09-27 | microsd, testing-station |
+| 393570004 | | | ✓ | Molex STEP (2015), for KiCad's `TerminalBlock_4Ucon_1x04_P3.50mm_Horizontal` with offset 5.25 0.25 0, rotation -90 0 -180. Holes checked against [Molex SD-39357-001](https://tools.molex.com/pdm_docs/sd/393570004_sd.pdf) | 2026-09-27 | max31865, testing-station |
