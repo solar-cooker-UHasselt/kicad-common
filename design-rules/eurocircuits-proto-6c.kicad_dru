@@ -1,0 +1,45 @@
+(version 1)
+
+# Eurocircuits PCB proto limits: technology class 6C, the finest class PCB proto
+# accepts. Values from the Eurocircuits classification table of 2024-05-07:
+# https://www.eurocircuits.com/technical-guidelines/pcb-design-guidelines/classification/
+# Copper to board edge from the copper layer guidelines:
+# https://www.eurocircuits.com/technical-guidelines/pcb-design-guidelines/copper-layers/
+# A board uses this as <board>.kicad_dru, a copy made by `just rules`.
+# Eurocircuits measures rings and hole clearances from the drill tool, which is
+# 0.10 mm larger than the finished plated hole. KiCad measures from the finished
+# hole, so those rules add 0.05 mm. Via holes up to 0.45 mm may be reduced by
+# Eurocircuits, so vias keep the plain 0.125 mm ring.
+
+(rule "EC 6C track width"
+	(constraint track_width (min 0.15mm)))
+
+(rule "EC 6C copper clearance"
+	(constraint clearance (min 0.15mm)))
+
+(rule "EC 6C via ring"
+	(condition "A.Type == 'Via'")
+	(constraint annular_width (min 0.125mm)))
+
+(rule "EC 6C pad ring"
+	(condition "A.Type == 'Pad'")
+	(constraint annular_width (min 0.175mm)))
+
+(rule "EC C plated hole"
+	(condition "A.isPlated()")
+	(constraint hole_size (min 0.25mm)))
+
+(rule "EC C non-plated hole"
+	(condition "!A.isPlated()")
+	(constraint hole_size (min 0.35mm)))
+
+(rule "EC 6C hole to copper"
+	(constraint hole_clearance (min 0.25mm)))
+
+(rule "EC copper to edge, outer layers"
+	(layer outer)
+	(constraint edge_clearance (min 0.25mm)))
+
+(rule "EC copper to edge, inner layers"
+	(layer inner)
+	(constraint edge_clearance (min 0.4mm)))

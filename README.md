@@ -30,6 +30,14 @@ In the board's `sym-lib-table` and `fp-lib-table`, one library each, named
 A board stays on the kicad-common commit its submodule points to. A change here
 reaches a board when that board updates its submodule and commits the new pointer.
 
+### Design rules
+
+`design-rules/` holds KiCad custom DRC rules, one file per board maker and class.
+KiCad only reads `<board>.kicad_dru` next to the `.kicad_pro`, so a board keeps a
+copy: `just rules` in the board repo copies the file its justfile names, and
+`just check` fails when the copy differs. Change the rules here, never in KiCad's
+Board Setup.
+
 ## Layout
 
 | Path | What is in it |
@@ -37,6 +45,7 @@ reaches a board when that board updates its submodule and commits the new pointe
 | `symbols/solar_cooker.kicad_sym` | All symbols, one library |
 | `footprints/solar_cooker.pretty/` | All footprints, one `.kicad_mod` per part |
 | `3dmodels/` | 3D models, `<part>.step` in lowercase, referenced by the footprints as `${KIPRJMOD}/kicad-common/3dmodels/<part>.step` |
+| `design-rules/` | Custom DRC rules per board maker and class, `eurocircuits-proto-6c.kicad_dru` for Eurocircuits PCB proto |
 
 ## Register
 
