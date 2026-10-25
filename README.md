@@ -1,11 +1,11 @@
 # kicad-common
 
+[![KiCad 10](https://img.shields.io/badge/KiCad-10-314CB0)](https://www.kicad.org/download/)
+
 Shared KiCad library for the board repos of
 [solar-cooker-UHasselt](https://github.com/solar-cooker-UHasselt): the symbols,
 footprints and 3D models KiCad's own library does not have. Each part is here once,
 checked against its datasheet, instead of copied between boards.
-
-KiCad 10.
 
 ## Use it in a board repo
 
