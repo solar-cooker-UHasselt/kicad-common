@@ -14,8 +14,13 @@ and the custom DRC rules per board maker. No code. Board repos mount it as a git
 submodule at `kicad-common/` and pin a commit, so a change reaches a board only when
 that board updates its submodule.
 
-Before adding a part, check whether KiCad's own library has it: a board uses KiCad's
-part where one fits, and only what is missing lives here.
+Before adding a part, check that it is still sold and whether KiCad's own library has
+it: a board uses KiCad's part where one fits, and only what is missing lives here.
+
+Boards name the 3D models by path and never embed them, although KiCad 10 offers to.
+Embedding copies each model into every board file and its git history (the MEM2061
+model alone is almost 3 MB), while the submodule already supplies them, locally and in
+CI.
 
 ## Repository map
 
